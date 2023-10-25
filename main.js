@@ -2,14 +2,23 @@ alert('Olá, mundo')
 function ticaSom(iElementoAudio){
     document.querySelector(iElementoAudio).play()
 }
-document.querySelectorAll('.tecla');
-listaDeTecla[0].onclick = tocaSom;
-const listaDeTecla = document.querySelectorAll('.tecla');
-listaDeTecla[0].onclick = tocaSomPom;
-let contador = 0;
-//Estrutura de repetição - Enquanto
-while(contador < listaDeTecla.length) {
-    listaDeTecla[contador].onclick = tocaSomPom;
-    contador = contador + 1;
-    console.log[contadaor];
+
+const listaDeTeclas = document.querySelectorAll('.tecla');
+
+//para
+for(let contador = 0; contador < listaDeTeclas.length; contador++) {
+}
+    const tecla = listaDeTeclas [contador];
+    const instrumento = tecla.classList[1];
+    const idAudio = '#som_ &{instrumento}';
+
+tecla.onclick = function () {
+    tocaSom(idAudio);
+}
+
+tecla.onkeydown = function (evento) {
+    console.log(evento);
+    if (evento.code == 'Enter') {
+ tecla.classList.add('ativa');
+    }
 }
